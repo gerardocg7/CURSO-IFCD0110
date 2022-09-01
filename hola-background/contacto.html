@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Background</title>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="index.html">
+                <i class="fa-solid fa-house"> </i> Inicio
+            </a>
+            <a href="contacto.html">
+                Contacto
+            </a>
+            <a href="oferta.html">
+                Oferta
+            </a>
+        </nav>
+    </header>
+    <div class="background">
+        <!--
+        Background igual que el de index     
+        -->
+    </div>
+
+    <li id="datosusuario">Datos del usuario:</li>
+
+    <!--Empieza el formulario-->
+    <form target="_self" name="form" id="form">
+        <!-- Estamos usando lista desordenada para los campos de formulario
+        Es también habitual hacerlo con los elementos de los menús de navegación
+        -->
+        <ul>
+            <!-- 
+                H1 y H2 aquí van dentro de la etqueta UL para que no se solape con los campos,
+                ya que este UL está en posición absoluta
+             -->
+            <h2>Envíanos tus datos</h2>
+            <h1>Cubre el formulario</h1>
+            <!-- 
+                Empiezan los campos de formulario
+             -->
+            <li>
+                <!-- Campo obligatorio tipo texto-->
+                <label for="nombre"><span class="required">*</span> Tu nombre</label><br>
+                <input type="text" name="nombre" id="nombre" required>
+
+            </li>
+            <li>
+                <!-- Campo tipo numérico-->
+                <label for="edad">Tu edad</label><br>
+                <input type="number" name="edad">
+
+            </li>
+            <li>
+                <!-- Campo obligatorio tipo Email-->
+                <label for="email"><span class="required">*</span> Email</label><br>
+                <input type="email" name="email" id="email" required>
+
+            </li>
+            <li>
+                <!-- Campo tipo Tel (teléfono)-->
+                Teléfono <br>(formato xxx yyy zzz):<br>
+                <input type="tel" name="tel" id="tel" pattern="[0-9]{9}">
+            </li>
+            <li>
+                <!-- inputs tipo Radio-button Llevan el mismo nombre 
+                    para que se reciba un solo dato. Es un solo campo con dos inputs que
+                    se marca además como obligatorio
+                -->
+                <span class="required">*</span> ¿Cómo vendrás al centro?
+                <hr>
+                <input type="radio" id="vehiculo" name="comoviene" value="vehiculo" required>
+                <label for="vehiculo">Tengo vehículo</label><br>
+                <input type="radio" id="andando" name="comoviene" value="andando">
+                <label for="andando">Voy andando</label>
+            </li>
+            <li>
+                <!-- inputs tipo checkbox. Cada uno es un campo.
+                    AVISAR SI NO POSEE ALGUNO DE ELLOS
+                -->
+                ¿ Qué vehículos tienes ?<br>
+                <input type="checkbox" id="coche" name="tipoVehiculo" value="coche">
+                <label for="coche">Tengo coche</label><br>
+                <input type="checkbox" id="moto" name="moto" value="moto">
+                <label for="moto">Tengo moto </label><br>
+                <input type="checkbox" id="barco" name="barco" value="barco">
+                <label for="barco">Tengo barco</label>
+            </li>
+            <li>
+                <!-- Campo tipo select, que crea un menú desplegable con las ociones
+                -->
+                ¿Qué curso quieres?
+                <label for="curso">Elige uno</label>
+
+                <select name="curso" id="curso">
+                    <option value="">Elige uno...</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <!-- Este sería el valor seleccionado por defecto
+                -->
+                    <option value="JS" selected>JAVASCRIPT</option>
+                </select>
+            </li>
+            <li>
+                <label for="DNI">Pon tu DNI (Formato 11122233-Letra)</label>
+                <input type="text" name="DNI" id="DNI" required>
+            </li>
+            <li>
+                <label for="textarea">Pon aquí tus comentarios</label>
+                <textarea name="textArea" id="textArea">
+
+                </textarea>
+            </li>
+            <li>
+                <!-- Botón de enviar.
+                    Es un input pero no envía valores, 
+                    aunque tiene un value que es el texto que se ve en el botón,  
+                    y por defecto (si no se pone) es "submit".
+                -->
+                <input type="submit" name="Enviar" value="Enviar">
+
+            </li>
+        </ul>
+    </form>
+    <script>
+        let formulario = document.getElementById('form');
+        const vehiculosPosible = [
+            'coche',
+            'moto',
+            'barco'
+        ]
+        let campoDNI = document.getElementById('DNI');
+        campoDNI.onblur = function (e) {
+            e.preventDefault();
+            const validaDNI = /^\d{8}[-]{1}[aA-zZ]{1}$/;
+            const datoDNI = campoDNI.value || false;
+            
+            if (!datoDNI || !validaDNI.test(datoDNI)) {
+                alert('Pon un DNI correcto');
+                campoDNI.style.border = "2px solid red";
+                if (document.activeElement.id = "DNI") return false;
+                campoDNI.focus();
+            } else {
+                alert('DNI correcto');
+            }
+        }
+        formulario.onsubmit = function (e) {
+            e.preventDefault();
+            const formData = new FormData(e.target);
+            const datosForm = Object.fromEntries(formData);
+
+            document.getElementById('textArea').value = `
+                <div>
+                    <h3 style="max-width:90% !important;color:black;text-shadow:none">
+                        ${JSON.stringify(datosForm).replace(',', ',<br>')}  
+                    </h3>
+                </div>
+            `;
+            console.log(datosForm);
+        }
+    </script>
+    <script>
+        /*  window.onload =function(){
+              let formulario = document.getElementById('form');
+              let datosusuario = document.getElementById('datosusuario');
+              formulario.onsubmit=function(e){
+                  /* hacer el código aquí*/
+        /*         e.preventDefault();
+                 let datos = 'Datos del usuario: <hr>';
+                 datos+='Nombre: ' +  formulario.elements.nombre.value;
+                 datos+='<br>Edad: ' +  formulario.elements.edad.value;
+                 datos+='<br>Email: ' +  formulario.elements.email.value;
+                 datos+='<br>Teléfono: ' +  formulario.elements.tel.value;
+                 datos+='<br>Cómo vienes: ' +  formulario.elements.comoviene.value;
+                 datos+='<br>Tiene coche? ' +  formulario.elements.coche.value || 'No tiene coche';
+                 datos+='<br>Tiene Moto? ' +  formulario.elements.moto.value || 'No tiene moto';
+                 datos+='<br>Tiene barco? ' +  formulario.elements.barco.value;
+                 datos+='<br>Curso elegido: ' +  formulario.elements.curso.value;
+                 datosusuario.innerHTML=datos;
+                 datosusuario.style.opacity='1';
+                 datosusuario.style.transition='opacity 2s';
+             }
+         }   */
+    </script>
+</body>
+
+</html>

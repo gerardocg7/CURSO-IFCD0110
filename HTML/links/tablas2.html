@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas 2</title>
+    <style>
+        table,
+        tr,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 4px
+        }
+
+        table {
+            width: 100%
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ejercicio tabla</h1>
+    <!--
+        Crear tabla de 3 filas y 4 columnas
+    -->
+    <table>
+        <!--
+        Centrar el texto y colorear el fondo
+    -->
+        <tr style="text-align: center; background-color: aquamarine;">
+            <td>
+                Nombre
+            </td>
+            <td>
+                Apellido
+            </td>
+            <td>
+                Teléfono
+            </td>
+            <td>
+                Email
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" value="" id="nombre" name="nombre"  required size="20">
+            </td>
+
+            <td>
+                <input type="text" value="" id="apellido" name="apellido" required size="40">
+            </td>
+
+            <td>
+                <input type="tel" ><br><br><br>
+            </td>
+            
+            <td>
+                <input type="email" value="" placeholder="ej:tunombre@tuemail.com" id="email" name="email" required size="35"><br><br><br>
+            </td>
+        </tr>
+
+        <tr>
+            <!--
+                Combinar celdas
+            -->
+            <td colspan="2">0</td>
+            <td>0</td>
+            <td rowspan="2">0</td>
+        </tr>
+
+        <tr>
+            <!--
+                Combinar celdas en vertical
+            -->
+            <td rowspan="2">0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+
+
+    </table>
+</body>
+
+</html>

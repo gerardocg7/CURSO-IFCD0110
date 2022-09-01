@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        index
+    </title>
+</head>
+<body>
+    <a href="contacto/contacto.html">Ver</a>
+    <a href="novedades/novedades.html">Ver</a>
+    <a href="novedades/ultimas_n/ultimas_novedades.html" target="_blank">Ver</a>
+</body>    
+</html>
