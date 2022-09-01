@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Layout</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  @font-face{
+    font-family: 'Cantar';
+    src: url('cantarell/Cantarell-Regular.ttf');
+}
+.cantarell{
+    font-family:'Cantar';
+}
+ 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* Style the header */
+.header {
+  background-color: #b8bef0;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: rgb(5, 143, 23);
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  background-image: url(../layout/pizza.jpg);
+  background-size: cover;
+  float: left;
+  padding: 10px;
+}
+
+/* Left and right column */
+.column.side {
+  width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1 class="cantarell">Pizza Rica Rica</h1>
+  <p>Cambia el tamaño de la ventana del navegador para ver el efecto de respuesta</p>
+</div>
+
+<div class="topnav">
+  <a href="Promocion 1.html">Promoción 1</a>
+  <a href="Promocion 2.html">Promoción 2</a>
+  <a href="Promocion 3.html">Promoción 3</a>
+</div>
+
+<div class="row">
+  <div class="column side">
+    <h2>Izquierda</h2>
+    <p>En un lugar de la Mancha, de cuyo nombre no quiero acordarme..</p>
+  </div>
+  
+  <div class="column middle">
+    <h2>Principal</h2>
+    <p> En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor. 
+      Una olla de algo más vaca que carnero, salpicón las más noches, duelos y quebrantos los sábados, lantejas los viernes, algún palomino de añadidura los domingos, 
+      consumían las tres partes de su hacienda.</p>
+    <p>El resto della concluían sayo de velarte, calzas de velludo para las fiestas, con sus pantuflos de lo mesmo, 
+      y los días de entresemana se honraba con su vellorí de lo más fino. Tenía en su casa una ama que pasaba de los cuarenta, 
+      y una sobrina que no llegaba a los veinte, y un mozo de campo y plaza, que así ensillaba el rocín como tomaba la podadera.</p>
+  </div>
+  
+  <div class="column side">
+    <h2>Derecha</h2>
+    <p>En un lugar de la Mancha, de cuyo nombre no quiero acordarme..</p>
+  </div>
+</div>
+  
+</body>
+</html>
+

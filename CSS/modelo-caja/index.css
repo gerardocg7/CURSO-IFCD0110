@@ -1,0 +1,28 @@
+h1{
+    border: 2px solid  #00F;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+h2{
+    border: 2px solid  #AAA;
+    padding: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+ul{
+    border: 2px solid #0F0
+}
+body{
+    padding-left: 40px ;
+    padding-right: 40px;
+}
+li{
+    margin-bottom:  15px ;
+}
+#datos{
+    margin-bottom: 0;
+}
+#Datos del libro{
+    box-shadow: 2px 2px 1px #000;
+}

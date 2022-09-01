@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Background</title>
+    <link href="css/index.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet" />
+
+   
+</head>
+
+<body>
+    <header>
+
+        <nav>
+           
+            <a href="index.html">
+                
+                <i class="fa-solid fa-house"> </i>       
+                 Inicio
+            </a>
+            <a href="contacto.html">
+                
+                Contacto
+            </a>
+            <a href="oferta.html">
+                Oferta
+            </a>
+        </nav>
+    </header>
+    <div class="background">
+        <!--
+        Vamos a vincular una hoja de estilos externa y vamos a crear una página
+        con un fondo de imagen que cubre toda la página y un título cabacera h1 centrado encima de la
+        imagen con color de texto en blanco y sombra de texto.
+    -->
+    </div>
+
+    <form target="_self" name="form" id="form">
+        <ul>
+            
+            <h2>Envíanos tus datos</h2>
+            <h1>Cubre el formulario</h1>
+            <li>
+                <label for="nombre"><span class="required">*</span> Tu nombre</label><br>
+                <input type="text" name="nombre" required>
+
+            </li>
+            <li>
+                <label for="nombre">Tu edad</label><br>
+                <input type="number" name="edad">
+
+            </li>
+            <li>
+                <label for="email"><span class="required">*</span> Email</label><br>
+                <input type="email" name="email" required>
+
+            </li>
+            <li>
+                Teléfono <br>(formato xxx yyy zzz):<br>
+               <input type="tel" pattern="+[0-9]{2} [0-9]{9}">
+            </li>
+            <li>
+                
+                <span class="required">*</span> ¿Cómo vendrás al centro?
+                <hr>
+                <input type="radio" id="vehiculo" name="comoviene" value="vehiculo" required>
+                <label for="vehiculo">Tengo vehículo</label><br>
+                <input type="radio" id="andando" name="comoviene" value="andando">
+                <label for="andando">Voy andando</label>
+            </li>
+            <li>
+                ¿ Qué vehículos tienes ?<br>
+                <input type="checkbox" id="coche" name="tipo" value="coche">
+                <label for="coche">Tengo coche</label><br>
+                <input type="checkbox" id="moto" name="moto" value="moto">
+                <label for="moto">Tengo moto </label><br>
+                <input type="checkbox" id="barco" name="barco" value="barco">
+                <label for="barco">Tengo barco</label>
+            </li>
+            <li>
+                ¿Qué curso quieres?
+                <label for="curso">Elige uno</label>
+
+                <select name="curso" id="curso">
+                    <option value="">Elige uno...</option>
+                    <option value="HTML">HTML</option>
+                    <option value="CSS">CSS</option>
+                    <option value="JS">JAVASCRIPT</option>
+                </select>
+            </li>
+            <li>
+
+                <input type="submit" name="Enviar">
+
+            </li>
+        </ul>
+    </form>
+</body>
+
+</html>

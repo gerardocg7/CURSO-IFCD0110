@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css');
+body{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.background {
+    background-image: url("../img/orgullo.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+    position: absolute;
+    z-index: -1;
+    width:100%;
+    top:0;
+    left:0;
+    height:100vh;    
+
+}
+h1, h2{
+  font-family: 'Oswald';
+}
+h2{
+  margin-top:30vh;
+}
+
+h1, h2 {
+     color: white;
+     text-shadow: 2px 2px 2px black;
+     text-align: center;
+     width:100%;
+     transition: 2s
+     
+ }
+ 
+ a, li{
+   width:5%;
+   padding:10px;
+   border:1px solid white;
+   box-shadow: 2px 2px 1px black;
+   position:relative;
+   color:white;
+   background-color: rgba(134, 81, 202, 0.3);
+   margin:5px;
+   text-decoration: none;
+   
+ }
+
+ a:active{
+  color:rgb(81, 202, 202);
+}
+a:visited{
+  color:rgb(81, 202, 202);
+}
+ nav{
+  margin-top:30px;
+  margin-left:30px;
+  text-align: center;
+ }
+li{
+   list-style: none;
+   height: 5vh;
+   min-height: 80px;
+   overflow: hidden;
+   width:20%;
+   min-width: 180px;
+   display: inline-block;
+ }
+ input{
+   padding: 10px;
+   float: right;
+ }
+ ul{
+   width:90%;
+   position: absolute;
+   bottom:10px;
+   left:5px;
+
+ }
+
+ #oferta{
+  background-image: url("../img/pizza.jpg");
+ }
+ .oferta{
+  margin-left:45%;
+  width: 50%;
+  text-align: right;
+  margin-right:5%;
+  font-size: 100px;
+  transition: none;
+ }
+ h2.oferta{
+  font-size: 60px;
+  margin-bottom: -25px
+ }
+ iframe{
+   float:left
+ }
+ .imagen_centrada{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    width: 50vw;
+    border: 3px solid palevioletred; 
+    margin:50px 25vw 50px 25vw;
+ }
+ .imagen_centrada img{
+   height: 25vh;
+ }
+ /*--  FORMULARIO --- */
+ input[type='checkbox']{
+  clear: both;
+ }
+header{
+  position:fixed;
+  top:0px;
+  left:0px;
+  z-index:4;
+  text-align: center;
+  width:100%
+}
+.required{
+  color:red
+}
+ /*Fin formulario*/
+
+ /*-------TRANSICIONES----------*/
+
+ a {
+
+  transition:font-size 0.5s ease-in-out; /* Animation */
+
+ }
+a:hover{
+  overflow: hidden;
+  font-size:20px
+
+ }
+
+ .anih1{
+  top:70vh;
+  position:absolute;
+  transition: 2s;
+ 
+    background-color: violet;
+    opacity: 0.5;
+    animation-name: example;
+    animation-duration: 10s;
+  }
+  
+  @keyframes example {
+    0%   {background-color: red;}
+    20%  {background-color: orange;}
+    40%  {background-color: yellow;}
+    60% {background-color: green;}
+    80%  {background-color: blue;}
+    100%  {background-color: violet;}
+    
+  }
+   
+ .anih2{
+    margin-top:80vh;
+    position: absolute;
+    transition: ease-in-out 3s;
+
+    background-color: violet;
+    opacity: 0.5;
+    animation-name: example;
+    animation-duration: 10s;
+ }
+  
+  @keyframes example {
+    0%   {background-color: red;}
+    20%  {background-color: orange;}
+    40%  {background-color: yellow;}
+    60% {background-color: green;}
+    80%  {background-color: blue;}
+    100%  {background-color: violet;}
+  }
+ 
+ /*------ TRANSICIONES -----*/
+
+
+ /*------ ANIMACIONES -----*/
+ /*el código de la animación*/
+ @keyframes h1anim {
+  0%   {margin-left:0;}
+  15%  {margin-left:5vh;}
+  30%  {margin-left:10vh;}
+  45%  {margin-left:15vh;}
+  60%  {margin-left:30vh;}
+  75%  {margin-left:35vh;}
+  90%  {margin-left:40vh;}
+  100% {margin-left:45vh;}
+}
+/*se aplica la animación*/
+.oferta{
+  animation-name: h1anim;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+h2.oferta{
+  animation-duration: 0.75s;
+}
+ /*------ANIMACIONES -------*/

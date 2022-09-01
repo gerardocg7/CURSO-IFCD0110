@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript new Date()</h2>
+
+<p id="demo"></p>
+
+<script>
+
+const fecha1 = new Date().getTime();
+const fecha2 = new Date().getTime();
+
+if(fecha1 < fecha2){
+  let fecha3 = fecha1;
+  fecha1 = fecha2;
+  fecha2 = fecha3;
+  }
+
+let interval = dateMsec - date.getTime();
+
+// Calcular cuentos días contiene el intervalo.
+// Restar cuantos días tiene el intervalo para determinar el sobrante
+let days = Math.floor(interval / msecPerDay );
+interval = interval - (days * msecPerDay );
+
+// Calcular las horas , minutos y segundos
+let hours = Math.floor(interval / msecPerHour );
+interval = interval - (hours * msecPerHour );
+
+let minutes = Math.floor(interval / msecPerMinute );
+interval = interval - (minutes * msecPerMinute );
+
+let seconds = Math.floor(interval / 1000 );
+
+// Mostrar el resultado.
+document.write(days + " días, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos");
+
+</script>
+
+</body>
+</html>

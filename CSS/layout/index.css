@@ -1,0 +1,9 @@
+@font-face{
+    font-family: 'Cantar';
+    src: url('cantarell/Cantarell-Regular.ttf');
+}
+
+.cantarell{
+    font-family:'Cantar';
+}
+

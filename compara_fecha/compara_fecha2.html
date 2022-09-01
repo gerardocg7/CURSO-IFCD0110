@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Calcualr diferencia entre dos fechas</h2>
+
+<p id="demo"></p>
+
+<script>
+// Convertir el valor de las unidades a milisegundos
+let msecPerMinute = 1000 * 60;
+let msecPerHour = msecPerMinute * 60;
+let msecPerDay = msecPerHour * 24;
+let msecPerMonth = msecPerDay *30;
+let msecPerYear = msecPerMonth *12;
+
+// Convertir la fecha a milisegundos
+let date = new Date('6/15/1901');
+let dateMsec = date.getTime();
+
+// Fecha inicial 1 de enero de 1900 a las 0:00 horas
+date.setYear(0);
+date.setMonth(0);
+date.setDate(1);
+date.setHours(0, 0, 0, 0);
+
+// Obtener la diferencia en milisegundos
+let interval = dateMsec - date.getTime();
+
+// Calcular años
+let years = Math.floor(interval / msecPerYear );
+interval = interval - (years * msecPerYear );
+
+// Calcular meses
+let months = Math.floor(interval / msecPerMonth );
+interval = interval - (months * msecPerMonth );
+
+// Calcular días
+let days = Math.floor(interval / msecPerDay );
+interval = interval - (days * msecPerDay );
+
+// Calcular las horas
+let hours = Math.floor(interval / msecPerHour );
+interval = interval - (hours * msecPerHour );
+
+//Calcular minutos
+let minutes = Math.floor(interval / msecPerMinute );
+interval = interval - (minutes * msecPerMinute );
+
+//Calcular segundos
+let seconds = Math.floor(interval / 1000 );
+
+// Mostrar el resultado.
+document.write( years, " años, " + months + " meses, " + days + " dias, " + hours + " horas, " + minutes + " minutos, " + seconds + " segundos");
+
+</script>
+
+</body>
+</html>
