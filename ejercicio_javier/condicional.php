@@ -20,7 +20,7 @@
   else{
     echo "ESTUDIAS O TRABAJAS";
   }
-*/
+
 if($variable3 == "HOLA"){
     if($variable1 == 85){
         echo "TODO CORRECTO";
@@ -39,5 +39,40 @@ if($variable3 == "HOLA"){
         default: echo "NO ES LABORABLE";
                  break;                                       
     }
-}
+
+    $contador1 = 1;   
+    while($contador1<=10){
+      echo "Vuelta numero $contador1<br>";
+      $contador1++;
+    }
+ 
+    while($variable3 == "HOLA"){
+      echo "HOLA COMO ESTÁS?";
+      $variable3 = "ADIOS";
+    }
+
+
+    $var_bool=true;
+    while($var_bool){
+      echo "Lo que sea<br>";
+      $var_bool = false;
+    }
+  */
+       $contador1=21;
+      do{
+        echo "Entra por lo menos 1 vez";
+        $contador1++;
+      }while($contador1<20);
+
+
+    for($i=0;$i<=10;$i+=2){
+
+      if(($i%2) == 0){
+        
+        echo "El número ".$i." es par";
+      }else{
+        echo "El número ".$i." es impar";
+      }
+      echo "Vuelta numero $i<br>";
+    }
 ?>
